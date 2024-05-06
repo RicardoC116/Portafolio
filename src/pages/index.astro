@@ -1,0 +1,70 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import PastillasSociales from  "../components/PastillasSociales.astro";
+import Experiencia from  "../components/Experiencia.astro";
+import Maletin from "../components/icons/Maletin.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Code from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
+---
+
+<Layout title="Ricardo Contreras Contreras - Desarrollador Web Front-End">
+	<main class="px-8">
+		<SectionContainer class=" py-20 lg:py-44 pb-25">
+			
+			<img 
+			class="rounded-full size-16 mb-6 " 
+			src="/src/img/Yo.webp" alt="Ricardo Foto" />
+
+			
+			<h1 class="text-white lg:text-3xl md:text-3xl text-1xl font-bold flex flex-row gab-x-4 pb-4">
+				Hey, soy Ricardo Contreras Contreras
+				<a href="https://www.linkedin.com/in/ricardo-contreras-contreras-0ab5aa306" target="_blank" rel="noopener" class=" flex justify-center items-center ml-4">
+					<Badge> Disponible para trabajar </Badge>
+				</a>
+			</h1>
+			<h2 class=" text-xl text-wrap lg:text-1xl opacity-80 max-w-[700px]" >
+				<span class=" text-red-200/80">Soy un apasionado desarrollador web con un enfoque en el
+				Front-End, </span> <span class=" text-purple-300/80"> especializado en crear interfaces de usuario
+				atractivas y funcionales. </span> <span class=" opacity-70"> Mi viaje en el mundo del desarrollo
+				comenzó durante mi estadía como desarrollador web </span>
+			</h2>
+
+
+			<nav class="flex gap-4 flex-wrap mt-8">
+				<PastillasSociales href="https://www.linkedin.com/in/ricardo-contreras-contreras-0ab5aa306">
+					<LinkedInIcon class=" size-4 lg:size-6" />
+					LinkedIn
+				</PastillasSociales>
+
+				<PastillasSociales href="https://github.com/RicardoC116">
+					<GitHubIcon class=" size-4 lg:size-6" />
+					GitHub
+				</PastillasSociales>
+				<PastillasSociales href="mailto:contrerasr1136@gmail.com">
+					<MailIcon class=" size-4 lg:size-6" />
+					contrerasr1136@gmail.com
+				</PastillasSociales>
+			</nav>
+	
+		</SectionContainer>
+		<SectionContainer id="Experiencia">
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center">
+				<Maletin class="size-6"/>
+				Experiencia laboral
+			</h2>
+			<Experiencia />
+		</SectionContainer>
+		<SectionContainer id="Proyectos" class=" mt-20">
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center justify-end">
+				Proyectos
+				<Code class="size-6"/>
+			</h2>
+			<Projects />
+		</SectionContainer>
+	</main>
+</Layout>

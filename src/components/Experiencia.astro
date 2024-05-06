@@ -1,0 +1,20 @@
+---
+import type { Code, Debug } from "astro:components";
+import ExperienciaItems from "./ExperienciaItems.astro";
+const EXPERIENCIE = [
+    {
+        title: "Desarrollador Frontend",
+        company: "SAR Solutions Elearning",
+        date: " Enero 2024 - Abril 2024",
+        description:
+            "Desempeñé el rol de Desarrollador Frontend durante mi estadía en SAR Solutions Elearning, donde adquirí experiencia práctica en el desarrollo de aplicaciones web utilizando tecnologías frontend como laravel, phpMyAdmin, PHP.  Colaboré estrechamente con el equipo de desarrollo para implementar interfaces de usuario intuitivas y atractivas, y participé en el diseño y la optimización de la experiencia del usuario. Además, tuve la oportunidad de trabajar en proyectos reales y contribuir al crecimiento y la innovación de la empresa.",
+    },
+];
+---
+
+<ol class="items-center sm:flex">
+    {EXPERIENCIE.map((experiencie) => 
+    <li class="relative mb-6 sm:mb-0">
+        <ExperienciaItems {...experiencie} />
+    </li>)}
+</ol>

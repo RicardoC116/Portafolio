@@ -1,0 +1,59 @@
+---
+import PHP from "./icons/PHP.astro";
+import Bootstrap from "./icons/Bootstrap.astro";
+import Laravel from "./icons/Laravel.astro";
+
+const TAGS = {
+    Laravel: {
+        name: "Laravel",
+        class: "bg-[#41110c]/60 text-white text-white",
+        icon: Laravel,
+    },
+    PHP: {
+        name: "PHP",
+        class: "bg-[#1d233b] text-white text-white",
+        icon: PHP,
+    },
+    Bootstrap: {
+        name: "Bootstrap",
+        class: "bg-[#231532]/85 text-white text-white " ,
+        icon: Bootstrap,
+    },
+};
+
+const PROJECTS = [
+    {
+        title: "Software de cursos online",
+        description:
+            "Desarrollé un software robusto para una plataforma de cursos en línea, diseñada para proporcionar una amplia variedad de cursos a los usuarios. Utilicé tecnologías como Laravel, PHP y Bootstrap para garantizar un funcionamiento eficiente y una experiencia de usuario intuitiva. ",
+        link: "http://sandboxmd.sar-solutions.com/home",
+        github: "",
+        image: "/src/img/projects/sar.webp",
+        tags: [TAGS.Laravel, TAGS.PHP, TAGS.Bootstrap],
+    },
+];
+---
+
+{
+    PROJECTS.map(({ title, description, link, github, image, tags }) => (
+        <article>
+            <h3 class="text-2xl font-semibold text-red-200/80 mb-4">{title}</h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul class="flex gap-x-2 flex-row "> 
+                {tags.map((tag) => (
+                    <li>
+                        <span class={`flex font-semibold text-sm gap-x-2 rounded-full items-center ${tag.class} py-1 px-4`}>
+                            <tag.icon class="size-6" />
+                            {tag.name}
+                        </span>
+                    </li>
+                ))}
+            </ul>
+            <img
+                class=" rounded-3xl shadow-2xl shadow-white/10 mt-11"
+                src={image}
+                alt={title}
+            />
+        </article>
+    ))
+}
