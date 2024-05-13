@@ -1,0 +1,31 @@
+---
+import Badge from "@/components/Badge.astro";
+import PastillasSociales from "@/components/PastillasSociales.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import LinkedInIcon from "@/components/icons/LinkedIn.astro";
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout title="Desing System portafolio.dev">
+    <SectionContainer class="py-20 lg:py-44 pb-25 flex flex-col gap-y-10">
+        <article class="mb-10">
+            <h1 class="mb-4 text-xl font-semibold">&lt;Badge /&gt;</h1>
+
+            <Badge>Disponible para trabajar</Badge>
+
+        </article>
+
+        <article class="mb-10">
+            <h1 class="mb-4 text-xl font-semibold">&lt;PastillasSociales /&gt;</h1>
+
+            <div class="flex">
+                <PastillasSociales
+                    href="https://www.linkedin.com/in/ricardo-contreras-contreras-0ab5aa306"
+                >
+                    <LinkedInIcon class="size-4 lg:size-6" />
+                    LinkedIn
+                </PastillasSociales>
+            </div>
+        </article>
+    </SectionContainer>
+</Layout>

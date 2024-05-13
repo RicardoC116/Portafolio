@@ -1,29 +1,33 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Badge from "../components/Badge.astro";
-import PastillasSociales from  "../components/PastillasSociales.astro";
-import Experiencia from  "../components/Experiencia.astro";
-import Maletin from "../components/icons/Maletin.astro";
-import LinkedInIcon from "../components/icons/LinkedIn.astro";
-import GitHubIcon from "../components/icons/GitHub.astro";
-import MailIcon from "../components/icons/Mail.astro";
-import SectionContainer from "../components/SectionContainer.astro";
-import Code from "../components/icons/Code.astro";
-import Projects from "../components/Projects.astro";
+import Layout from "@/layouts/Layout.astro";
+import Badge from "@/components/Badge.astro";
+import PastillasSociales from  "@/components/PastillasSociales.astro";
+import Experiencia from  "@/components/Experiencia.astro";
+import Maletin from "@/components/icons/Maletin.astro";
+import LinkedInIcon from "@/components/icons/LinkedIn.astro";
+import GitHubIcon from "@/components/icons/GitHub.astro";
+import MailIcon from "@/components/icons/Mail.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import Code from "@/components/icons/Code.astro";
+import Projects from "@/components/Projects.astro";
+import Profile from "@/components/icons/Profile.astro";
+import AboutMe from "@/components/AboutMe.astro";
 ---
 
 <Layout title="Ricardo Contreras Contreras - Desarrollador Web Front-End">
 	<main class="px-8">
-		<SectionContainer class=" py-20 lg:py-44 pb-25">
+		<!-- Presentacion -->
+		<SectionContainer id="" class=" py-16 lg:py-20 pb-25">
 			
 			<img 
 			class="rounded-full size-16 mb-6 " 
 			src="/src/img/Yo.webp" alt="Ricardo Foto" />
 
 			
-			<h1 class="text-white lg:text-3xl md:text-3xl text-1xl font-bold flex flex-row gab-x-4 pb-4">
-				Hey, soy Ricardo Contreras Contreras
-				<a href="https://www.linkedin.com/in/ricardo-contreras-contreras-0ab5aa306" target="_blank" rel="noopener" class=" flex justify-center items-center ml-4">
+			<h1 class="text-white lg:text-3xl md:text-3xl text-3xl font-bold flex flex-row gap-x-4 pb-4">
+				Hey, soy Ricardo 
+				<a href="https://www.linkedin.com/in/ricardo-contreras-contreras-0ab5aa306" target="_blank" rel="noopener" 
+				class=" flex justify-center items-center ml-4 hover:scale-110 transition">
 					<Badge> Disponible para trabajar </Badge>
 				</a>
 			</h1>
@@ -52,6 +56,7 @@ import Projects from "../components/Projects.astro";
 			</nav>
 	
 		</SectionContainer>
+		<!-- Experiencia -->
 		<SectionContainer id="Experiencia">
 			<h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center">
 				<Maletin class="size-6"/>
@@ -59,12 +64,21 @@ import Projects from "../components/Projects.astro";
 			</h2>
 			<Experiencia />
 		</SectionContainer>
+		<!-- Proyectos -->
 		<SectionContainer id="Proyectos" class=" mt-20">
 			<h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center justify-end">
 				Proyectos
 				<Code class="size-6"/>
 			</h2>
 			<Projects />
+		</SectionContainer>
+		<!-- Sobre mi -->
+		<SectionContainer id="Sobre-mi" class=" mt-20">
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center justify-start">
+				<Profile class="size-6"/>
+				Sobre mi
+			</h2>
+			<AboutMe />
 		</SectionContainer>
 	</main>
 </Layout>
