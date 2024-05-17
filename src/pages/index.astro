@@ -12,6 +12,8 @@ import Code from "@/components/icons/Code.astro";
 import Projects from "@/components/Projects.astro";
 import Profile from "@/components/icons/Profile.astro";
 import AboutMe from "@/components/AboutMe.astro";
+import Skills from "@/components/Skills.astro";
+import Habilides from "@/components/icons/Habilides.astro";
 ---
 
 <Layout title="Ricardo Contreras Contreras - Desarrollador Web Front-End">
@@ -56,6 +58,7 @@ import AboutMe from "@/components/AboutMe.astro";
 			</nav>
 	
 		</SectionContainer>
+
 		<!-- Experiencia -->
 		<SectionContainer id="Experiencia">
 			<h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center">
@@ -64,6 +67,7 @@ import AboutMe from "@/components/AboutMe.astro";
 			</h2>
 			<Experiencia />
 		</SectionContainer>
+
 		<!-- Proyectos -->
 		<SectionContainer id="Proyectos" class=" mt-20">
 			<h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center justify-end">
@@ -72,6 +76,7 @@ import AboutMe from "@/components/AboutMe.astro";
 			</h2>
 			<Projects />
 		</SectionContainer>
+
 		<!-- Sobre mi -->
 		<SectionContainer id="Sobre-mi" class=" mt-20">
 			<h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center justify-start">
@@ -80,5 +85,16 @@ import AboutMe from "@/components/AboutMe.astro";
 			</h2>
 			<AboutMe />
 		</SectionContainer>
+
+		<!-- Habilidades -->
+		<SectionContainer id="Sobre-mi" class=" mt-20">
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center justify-end">
+				Habilidades
+				<Habilides class="size-7"/>
+			</h2>
+			<Skills />
+		</SectionContainer>
+
+		
 	</main>
 </Layout>

@@ -1,0 +1,97 @@
+---
+import AngularICon from "./icons/Skils/Front-End/Angular.astro";
+import AstroIcon from "./icons/Skils/Front-End/Astro.astro";
+import IonicIcon from "./icons/Skils/Front-End/Ionic.astro";
+import HTMLIcon from "./icons/Skils/Front-End/HTML.astro";
+import Bootstrap from "./icons/Bootstrap.astro";
+import Tailwind from "./icons/Skils/Front-End/Tailwind.astro";
+import Js from "./icons/Skils/Front-End/Js.astro";
+import Css from "./icons/Skils/Front-End/Css.astro";
+import PHP from "./icons/PHP.astro";
+import Laravel from "./icons/Laravel.astro";
+
+const Front = [
+    {
+        title: "Angular",
+        icons: AngularICon,
+    },
+    {
+        title: "Ionic",
+        icons: IonicIcon,
+    },
+    {
+        title: "Astro",
+        icons: AstroIcon,
+    },
+    {
+        title: "HTML",
+        icons: HTMLIcon,
+    },
+    {
+        title: "CSS",
+        icons: Css,
+    },
+    {
+        title: "JavaScript",
+        icons: Js,
+    },
+    {
+        title: "Bootstrap",
+        icons: Bootstrap,
+    },
+    {
+        title: "Tailwind",
+        icons: Tailwind,
+    },
+];
+
+const Back = [
+    {
+        title: "PHP",
+        icons: PHP,
+    },
+    {
+        title: "Laravel",
+        icons: Laravel,
+    },
+];
+---
+
+<article>
+    <h1
+        class="text-3xl font-semibold text-red-200/80 text-center mb-4 mt-10 md:text-start">
+        Front-End
+    </h1>
+    <ul class="flex flex-row gap-x-28 flex-wrap justify-around">
+        {
+            Front.map(({ title, icons: Icon }) => (
+                <li>
+                    <span class="flex flex-col font-semibold text-lg gap-y-4 items-center mt-10">
+                        {title}
+                        {Icon && <Icon class="size-16" />}
+                    </span>
+                </li>
+            ))
+        }
+    </ul>
+</article>
+
+<article>
+    <h1
+        class="text-3xl font-semibold text-red-200/80 text-center md:text-start mb-12 mt-20"
+    >
+        Back-End
+    </h1>
+    <ul class="flex flex-row gap-x-2 justify-evenly">
+        {
+            Back.map(({ title, icons: Icon }) => (
+                <li>
+                    <span class="flex flex-col font-semibold text-lg gap-y-4 items-center">
+                        {title}
+                        {Icon && <Icon class="size-16" />}
+                    </span>
+                </li>
+            ))
+        }
+    </ul>
+</article>
