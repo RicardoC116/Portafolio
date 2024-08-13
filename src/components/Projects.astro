@@ -5,8 +5,8 @@ import Laravel from "./icons/Laravel.astro";
 import LinkButton from "./LinkButton.astro";
 import GitHub from "./icons/GitHub.astro";
 import ViewMore from "./icons/ViewMore.astro";
-import Js from "./icons/Skils/Front-End/HTML.astro";
-import Html from "./icons/Skils/Front-End/Js.astro";
+import Js from "./icons/Skils/Front-End/Js.astro";
+import Html from "./icons/Skils/Front-End/HTML.astro";
 import Css from "./icons/Skils/Front-End/Css.astro";
 
 const TAGS = {
@@ -27,17 +27,17 @@ const TAGS = {
     },
     JS: {
         name: "JS",
-        class: "bg-[#f7d2c4]/80 text-white text-white",
+        class: "bg-[#3d3e1ecc]/80 text-white text-white",
         icon: Js,
     },
     html:{
         name: "HTML",
-        class: "bg-[#f7d2c4]/80 text-white text-white",
+        class: "bg-[#4e2415cc]/80 text-white text-white",
         icon: Html
     },
     css:{
         name: "CSS",
-        class: "bg-[#f7d2c4]/80 text-white text-white",
+        class: "bg-[#123051cc]/80 text-white text-white",
         icon: Css
     }
 };
@@ -55,18 +55,18 @@ const PROJECTS = [
 
     {
         title: "Tier list",
-        description: "Desarrollé un tier list funcional mediante JS y HTML",
+        description: "Desarrollé un tier list funcional mediante JS y HTML, el cual se puden arrastrar las imagenes desde el escritorio y al terminar de crear su tier se puede tomar una captura del tier creado mediante el boton de guardar",
         link: "https://tier-list-jade.vercel.app/",
         github: "https://github.com/RicardoC116/Tier-list",
         image: "/Tiermaker.webp",
-        tags: [TAGS.JS, ],
+        tags: [TAGS.JS, TAGS.html, TAGS.css],
     },
 ];
 ---
 
 {
     PROJECTS.map(({ title, description, link, github, image, tags }) => (
-        <article>
+        <article class=" mb-8">
             <h3 class="text-2xl font-semibold text-red-200/80 mb-4">{title}</h3>
             <p class="text-lg mb-4 text-pretty">{description}</p>
             <ul class="flex gap-x-2 flex-row ">
@@ -82,7 +82,7 @@ const PROJECTS = [
                 ))}
             </ul>
             <img
-                class=" rounded-3xl shadow-2xl shadow-white/5 mt-11"
+                class= {`rounded-3xl shadow-2xl shadow-white/5 mt-11 `  }
                 src={image}
                 alt={title}
             />
