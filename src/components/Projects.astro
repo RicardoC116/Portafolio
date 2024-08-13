@@ -5,6 +5,9 @@ import Laravel from "./icons/Laravel.astro";
 import LinkButton from "./LinkButton.astro";
 import GitHub from "./icons/GitHub.astro";
 import ViewMore from "./icons/ViewMore.astro";
+import Js from "./icons/Skils/Front-End/HTML.astro";
+import Html from "./icons/Skils/Front-End/Js.astro";
+import Css from "./icons/Skils/Front-End/Css.astro";
 
 const TAGS = {
     Laravel: {
@@ -22,6 +25,21 @@ const TAGS = {
         class: "bg-[#231532]/85 text-white text-white ",
         icon: Bootstrap,
     },
+    JS: {
+        name: "JS",
+        class: "bg-[#f7d2c4]/80 text-white text-white",
+        icon: Js,
+    },
+    html:{
+        name: "HTML",
+        class: "bg-[#f7d2c4]/80 text-white text-white",
+        icon: Html
+    },
+    css:{
+        name: "CSS",
+        class: "bg-[#f7d2c4]/80 text-white text-white",
+        icon: Css
+    }
 };
 
 const PROJECTS = [
@@ -33,6 +51,15 @@ const PROJECTS = [
         github: "",
         image: "/Sar.webp",
         tags: [TAGS.Laravel, TAGS.PHP, TAGS.Bootstrap],
+    },
+
+    {
+        title: "Tier list",
+        description: "Desarrollé un tier list funcional mediante JS y HTML",
+        link: "https://tier-list-jade.vercel.app/",
+        github: "https://github.com/RicardoC116/Tier-list",
+        image: "/Tiermaker.webp",
+        tags: [TAGS.JS, ],
     },
 ];
 ---
